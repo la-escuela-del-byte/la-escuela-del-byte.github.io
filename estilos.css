@@ -184,6 +184,40 @@ nav{
  -webkit-transition: max-height 0.5s, opacity 0.5s; /* Safari */
  transition: max-height 0.5s, opacity 0.5s;
  }
+
+@media (max-width: 1280px){
+   html, body {
+      height: 100%;
+   }
+   header {
+      width: 10rem;
+      height: 100%;
+      }
+   .menu {
+      height: 100%;
+      text-align: left;
+      border: 0;
+      }
+  	.menu * {
+	  font: normal 1.25rem/1 "Myriad", Arial, Helvetica, sans-serif; color: #334;
+	  }
+   .menu ol, .menu li, .menu li a {
+      width: 100%;
+      }
+   .menu > li:not(.closed) {
+      border-left: 0;
+      border-bottom: solid 1px #334; 
+   }
+   .menu > li + li {
+      border-left: 0;
+      }
+   .menu ol {
+      position: relative;
+      }
+   .hidden {
+      display: none;
+      }
+}
 /*
 @media only screen and (max-device-height: 1280px){
    body:after {
@@ -209,7 +243,7 @@ nav{
       }
    }
 }
-*/
+
 @media only screen and (max-width: 1280px) and (min-aspect-ratio: 16/10), only screen and (max-width: 1024px) and (aspect-ratio: 4/3), only screen and (orientation: portrait), only screen and (max-width: 768px)and (orientation: landscape){
    html, body {
       height: 100%;
@@ -244,7 +278,7 @@ nav{
       }
 }
 
-
+*/
 
  /*Creamos un efecto cortina
 

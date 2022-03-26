@@ -222,7 +222,8 @@ nav{
    display: inline-block;
    width: 3.125rem;
    height: 3.125rem;
-   background: #fff url(img/hamburguer.png) no-repeat center left;
+   background: #fff url(img/hamburguer.png) no-repeat left center;
+  background-position: top left;
    border: 0;
    }
 .hidden {

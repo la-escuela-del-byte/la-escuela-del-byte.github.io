@@ -184,7 +184,7 @@ nav{
  -webkit-transition: max-height 0.5s, opacity 0.5s; /* Safari */
  transition: max-height 0.5s, opacity 0.5s;
  }
-/*
+
 @media only screen and (max-device-height: 1280px){
    body:after {
       display: block;
@@ -244,7 +244,7 @@ nav{
 }
 
 
-*/
+
  /*Creamos un efecto cortina
 
 .menu li.closed li {
@@ -485,59 +485,7 @@ section p:hover{
     h1{ font-size: 1em;}
 }
 */
-@media  (max-width: 1280px),...{
-  html, body {
-    height: 100%; /*Igualamos la altura del body a la de la ventana*/
-   }
-   .menu {
-     width: 10rem;
-     height: 100%; /*Ahora igualamos la altura del menú a la del body*/
-     text-align: center;
-   }
-.menu * { /*Ajustamos el tamaño del texto y de todos los elementos para una mejor experiencia táctil*/
- font-size: 1.5rem;
- }
-}
-	  
-@media (max-width: 768px){
-       header {
-	   width: initial;
-	   height:initial;
-	   }
-	.hamburguer {
-	   display: inline-block;
-	   width: 3.125rem;
-	   height: 3.125rem;
-	   background: red url(img/hamburguer.png) no-repeat center center;
-	   border: 0;
-	   outline: 0;
-		cursor: pointer;
-	   }
-	.menu * {
-	  font: normal 1.5rem/1 "Myriad", Arial, Helvetica, sans-serif; color: #334;
-	  }
 
-}
-/*
-@media only screen and (max-width: 768px){
-	header {
-	   width: initial;
-	   height:initial;
-	   }
-	.hamburguer {
-	   display: inline-block;
-	   width: 3.125rem;
-	   height: 3.125rem;
-	   background: #fff url(hamburguer.png) no-repeat center center;
-	   border: 0;
-	   outline: 0;
-		cursor: pointer;
-	   }
-	.menu * {
-	  font: normal 1.5rem/1 "Myriad", Arial, Helvetica, sans-serif; color: #334;
-	  }
-}
-*/
 .limpiar{clear: both;}
 
 

@@ -485,7 +485,21 @@ section p:hover{
     h1{ font-size: 1em;}
 }
 */
-@media (max-width: 640px){
+@media  (max-width: 1280px),...{
+  html, body {
+    height: 100%; /*Igualamos la altura del body a la de la ventana*/
+   }
+   .menu {
+     width: 10rem;
+     height: 100%; /*Ahora igualamos la altura del menú a la del body*/
+     text-align: center;
+   }
+.menu * { /*Ajustamos el tamaño del texto y de todos los elementos para una mejor experiencia táctil*/
+ font-size: 1.5rem;
+ }
+}
+	  
+@media (max-width: 768px){
        header {
 	   width: initial;
 	   height:initial;

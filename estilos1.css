@@ -122,18 +122,63 @@ nav{
    text-align: center; 
 }
 
-.menu > li {
-  display: inline-block; /*Alineamos los li del primer nivel*/
-   list-style: none;
+
+
+.menu {
+  margin: 0;
+  font-size: 0; /*Eliminamos los espacios entre los li*/
+  color: #999;
+  text-align: center; /*Nuestros li se desplazan a la derecha*/
 }
 
+.hamburguer {
+ display: none;
+ }
+
+.menu * { /*Aplicamos los estilos de fuente a todos los elementos del menú*/
+ font: normal 1rem/1 "Myriad", Arial, Helvetica, sans-serif;
+ color: #334;
+ }
+.menu > li {
+ display: inline-block; /*Alineamos los li del primer nivel*/
+ position: relative; /*Le damos un contexto al menú desplegable que tendrá una posición absoluta*/
+ list-style: none;
+}
+
+.menu > li + li { /*Todos los li precedidos por otro, es decir, todos menos el primero*/
+  border-left: solid 1px #334;
+}
+
+.menu li a {
+ display: inline-block;
+ padding: 0.625rem 1.25rem;
+ text-decoration: none;
+ }
+
 .menu ol {
+ display: block;
  position:absolute;
  left: 0;
  top:100%;/*Lo posicionamos en el borde inferior de su padre*/
+ border-top: solid 0.25rem #F96;
+ background: #fed;
  }
 
- /*Creamos un efecto cortina*/
+
+.menu li:hover {
+  background: #fc9;
+  cursor: pointer; /*Puedes eliminarlo una vez incluyas enlaces*/
+ }
+
+.menu ol:before {
+ content: "▲";
+ position: absolute;
+ top: -0.875rem;
+ left: 2.5rem; /*right: 2.5rem; si alineamos el menú a la derecha*/
+ font-size: 1rem;
+ color: #F96;
+ }
+
 .menu ol li {
  display: block;
  max-height: 3.125rem; /*Es el tamaño que tendrá cada item del listado abierto*/
@@ -142,83 +187,7 @@ nav{
  transition: max-height 0.5s, opacity 0.5s;
  white-space: nowrap;
  }
-.menu li.closed li {
- overflow: hidden;
- max-height: 0; /*Es el tamaño que tendrá cada item del listado cerrado*/
- opacity: 0;
- -webkit-transition: max-height 0.5s, opacity 0.5s;
- transition: max-height 0.5s, opacity 0.5s;
- }
 
-.menu {
-  font-size: 0; /*Eliminamos los espacios entre los li*/
-}
-.menu * { /*Aplicamos los estilos de fuente a todos los elementos del menú*/
- font: normal 1rem/1 "Myriad", Arial, Helvetica, sans-serif;
- color: #334;
- }
-.menu > li {
- display: inline-block;
- position: relative; /*Le damos un contexto al menú desplegable que tendrá una posición absoluta*/
-}
-
-
-
-.menu {
-  margin: 0;
-  font-size: 0;
-  color: #999;
-}
-.menu * {
- font: normal 1rem/1 "Myriad", Arial, Helvetica, sans-serif;
- color: #334;
- }
-.menu > li {
-  display: inline-block;
-  position: relative;
-}
-.menu > li + li { /*Todos los li precedidos por otro, es decir, todos menos el primero*/
-  border-left: solid 1px #334;
-}
-.menu li a {
- display: inline-block;
- padding: 0.625rem 1.25rem;
- text-decoration: none;
- }
-.menu li:hover {
-  background: #fc9;
-  cursor: pointer; /*Puedes eliminarlo una vez incluyas enlaces*/
- }
-.menu li:hover ol {
-  display: block;
-  position:absolute;
-  left: 0; /*right: 0; si alineamos el menú a la derecha*/
-  top:100%;
-  border-top: solid 4px #F96;
- }
-.menu ol {
- display: block;
- position:absolute;
- left: 0;
- top:100%;
- border-top: solid 0.25rem #F96;
- background: #fed;
- }
-.menu ol:before {
- content: "▲";
- position: absolute;
- top: -0.875rem;
- left: 2.5rem; /*right: 2.5rem; si alineamos el menú a la derecha*/
- color: #F96;
- }
-.menu ol li {
- display: block;
- max-height: 3.125rem;
- opacity: 1;
- -webkit-transition: max-height 0.5s, opacity 0.5s; /* Safari */
- transition: max-height 0.5s, opacity 0.5s;
- white-space: nowrap;
- }
 .menu .closed li {
  overflow: hidden;
  max-height: 0;
@@ -227,16 +196,32 @@ nav{
  transition: max-height 0.5s, opacity 0.5s;
  }
 
-.menu {
-  margin: 0;
-  font-size: 0;
-  color: #999;
-  text-align: center; /*Nuestros li se desplazan a la derecha*/
-}
+ /*Creamos un efecto cortina
 
-.hamburguer {
- display: none;
+.menu li.closed li {
+ overflow: hidden;
+ max-height: 0; /*Es el tamaño que tendrá cada item del listado cerrado*/
+/*
+ opacity: 0;
+ -webkit-transition: max-height 0.5s, opacity 0.5s;
+ transition: max-height 0.5s, opacity 0.5s;
  }
+
+
+
+
+.menu li:hover ol {
+  display: block;
+  position:absolute;
+  left: 0; /*right: 0; si alineamos el menú a la derecha*/
+/*
+  top:100%;
+  border-top: solid 4px #F96;
+ }
+*/
+
+
+
 
 @media  (max-width: 1280px),.../*ver Paso 2*/ {
   html, body {

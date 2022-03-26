@@ -212,6 +212,23 @@ nav{
       display: none;
       }
 }
+
+@media (max-width: 768px){
+  header { /*Devolvemos el estado horizontal inicial a la cabecera. El menú se adaptará a ella*/
+   width: initial;
+   height:initial;
+   }
+.hamburguer {
+   display: inline-block;
+   width: 3.125rem;
+   height: 3.125rem;
+   background: #fff url(img/hamburguer.png) no-repeat center center;
+   border: 0;
+   }
+.hidden {
+   display: none; /*esta clase nos permitirá ocultar el menú mediante jQuery*/
+  }
+}
 /*
 @media only screen and (max-device-height: 1280px){
    body:after {

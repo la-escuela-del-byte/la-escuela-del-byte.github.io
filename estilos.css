@@ -184,7 +184,7 @@ nav{
  -webkit-transition: max-height 0.5s, opacity 0.5s; /* Safari */
  transition: max-height 0.5s, opacity 0.5s;
  }
-
+/*
 @media only screen and (max-device-height: 1280px){
    body:after {
       display: block;
@@ -209,6 +209,7 @@ nav{
       }
    }
 }
+*/
 @media only screen and (max-width: 1280px) and (min-aspect-ratio: 16/10), only screen and (max-width: 1024px) and (aspect-ratio: 4/3), only screen and (orientation: portrait), only screen and (max-width: 768px)and (orientation: landscape){
    html, body {
       height: 100%;

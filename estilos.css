@@ -214,13 +214,16 @@ section p a:hover{
    width: initial;
    height:initial;
    }
+.menu {
+      height: 100%;
+      text-align: left;
+      border: 0;
+      }
 .hamburguer {
    display: inline-block;
    width: 3.125rem;
    height: 3.125rem;
-   background: #fff url(img/hamburguer.png) no-repeat left center;
-   text-align: left;
-  
+   background: #fff url(img/hamburguer.png) no-repeat center center;
    border: 0;
    }
 .hidden {

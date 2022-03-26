@@ -34,7 +34,7 @@
       clickBurguer();//Inicializamos clickBurguer
       
       var closeMenu = function(){ //Ocultamos y mostramos submenús
-         $('.menu > li').has('ul').addClass('closed'); //Cerramos todos los submenús
+         $('.menu > li').has('ol').addClass('closed'); //Cerramos todos los submenús
       }
       closeMenu();
       $('.menu > li a').on('click', function(){

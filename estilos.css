@@ -222,7 +222,7 @@ nav{
    display: inline-block;
    width: 3.125rem;
    height: 3.125rem;
-   background: #fff url(img/hamburguer.png) no-repeat center center;
+   background: #fff url(img/hamburguer.png) no-repeat left center;
   
    border: 0;
    }

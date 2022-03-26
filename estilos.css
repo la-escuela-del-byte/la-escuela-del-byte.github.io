@@ -219,6 +219,7 @@ section p a:hover{
    width: 3.125rem;
    height: 3.125rem;
    background: #fff url(img/hamburguer.png) no-repeat left center;
+   text-align: left;
   
    border: 0;
    }

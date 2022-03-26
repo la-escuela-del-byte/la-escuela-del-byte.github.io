@@ -209,7 +209,7 @@ section p a:hover{
       }
 }
 */
-@media (max-width: 900px){
+@media (max-width: 768px){
   header { /*Devolvemos el estado horizontal inicial a la cabecera. El menú se adaptará a ella*/
    width: initial;
    height:initial;

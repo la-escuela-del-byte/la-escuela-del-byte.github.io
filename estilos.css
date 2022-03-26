@@ -180,7 +180,7 @@ section p a:hover{
  -webkit-transition: max-height 0.5s, opacity 0.5s; /* Safari */
  transition: max-height 0.5s, opacity 0.5s;
  }
-/*
+
 @media (max-width: 1280px){
   
    .menu {
@@ -208,13 +208,17 @@ section p a:hover{
       display: none;
       }
 }
-*/
+
 @media (max-width: 768px){
   header { /*Devolvemos el estado horizontal inicial a la cabecera. El menú se adaptará a ella*/
    width: initial;
    height:initial;
    }
-
+.menu {
+      height: 100%;
+      text-align: left;
+      border: 0;
+      }
 .hamburguer {
    display: inline-block;
    width: 3.125rem;

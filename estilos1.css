@@ -1,0 +1,487 @@
+
+
+ * {
+ box-sizing:border-box; /*Para no tener que andar restando bordes y paddings de las medidas*/
+ margin: 0; padding: 0; /*Eliminamos espacios por defecto del html, body o ul que usaremos*/
+ }
+
+/* Estilos para Body */
+
+body{
+    
+    margin: auto;
+    background-color: white;
+    font-family: Times New Roman,Times,serif;
+    
+    
+   
+}
+
+/* estilos para boton ir arriba*/
+.ir-arriba{
+  display:none;
+  background-repeat:no-repeat;
+  font-size:20px;
+  color:black;
+  cursor:pointer;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  z-index:2;
+}
+/* estilos para cabecera*/
+header{
+    margin: 0px 0px;
+    padding: 2% 0% ;
+    background-color:  black;
+   
+   
+}
+
+h1{ 
+    font-family: Times New Roman,Times,serif;
+      color: #7400b8; 
+      font-weight: 900;
+      text-align: center;
+    
+}
+
+@media (max-width: 3840px){
+    h1{ font-size: 4em;}
+}
+
+@media (max-width: 2560px){
+    h1{ font-size: 4em;}
+}
+
+@media (max-width: 1920px){
+    h1{ font-size: 3em;}
+}
+
+@media (max-width: 1280px){
+    h1{ font-size: 2em; }
+}
+
+@media (max-width: 1024px){
+    h1{ font-size: 2em; }
+}
+
+@media (max-width: 960px){
+    h1{ font-size: 1em; }
+}
+
+
+@media (max-width: 854px){
+    h1{ font-size: 1em; }
+}
+
+@media (max-width: 800px){
+    h1{ font-size: 1em;}
+}
+
+@media (max-width: 768px){
+    h1{ font-size: 1em;}
+}
+
+@media (max-width: 720px){
+    h1{ font-size: 1em;}
+}
+
+@media (max-width: 640px){
+
+
+    h1{ font-size: 1em;}
+}
+
+/* estilos para enlaces de contacto */
+
+section{
+  background: #7400b8; 
+  margin: 0px 0px;
+  padding: 0% 0%;
+}
+
+section p{
+  text-align: center; 
+  margin: 0px 0px;
+  padding: 0% 0%;
+}
+
+
+section p a:hover{
+  cursor:pointer;
+}
+
+
+
+
+
+/* Estilos para la barra de navegación */
+nav{
+  
+   text-align: center; 
+}
+
+.menu > li {
+  display: inline-block; /*Alineamos los li del primer nivel*/
+   list-style: none;
+}
+
+.menu ol {
+ position:absolute;
+ left: 0;
+ top:100%;/*Lo posicionamos en el borde inferior de su padre*/
+ }
+
+ /*Creamos un efecto cortina*/
+.menu ol li {
+ display: block;
+ max-height: 3.125rem; /*Es el tamaño que tendrá cada item del listado abierto*/
+ opacity: 1;
+ -webkit-transition: max-height 0.5s, opacity 0.5s;
+ transition: max-height 0.5s, opacity 0.5s;
+ white-space: nowrap;
+ }
+.menu li.closed li {
+ overflow: hidden;
+ max-height: 0; /*Es el tamaño que tendrá cada item del listado cerrado*/
+ opacity: 0;
+ -webkit-transition: max-height 0.5s, opacity 0.5s;
+ transition: max-height 0.5s, opacity 0.5s;
+ }
+
+.menu {
+  font-size: 0; /*Eliminamos los espacios entre los li*/
+}
+.menu * { /*Aplicamos los estilos de fuente a todos los elementos del menú*/
+ font: normal 1rem/1 "Myriad", Arial, Helvetica, sans-serif;
+ color: #334;
+ }
+.menu > li {
+ display: inline-block;
+ position: relative; /*Le damos un contexto al menú desplegable que tendrá una posición absoluta*/
+}
+
+
+
+.menu {
+  margin: 0;
+  font-size: 0;
+  color: #999;
+}
+.menu * {
+ font: normal 1rem/1 "Myriad", Arial, Helvetica, sans-serif;
+ color: #334;
+ }
+.menu > li {
+  display: inline-block;
+  position: relative;
+}
+.menu > li + li { /*Todos los li precedidos por otro, es decir, todos menos el primero*/
+  border-left: solid 1px #334;
+}
+.menu li a {
+ display: inline-block;
+ padding: 0.625rem 1.25rem;
+ text-decoration: none;
+ }
+.menu li:hover {
+  background: #fc9;
+  cursor: pointer; /*Puedes eliminarlo una vez incluyas enlaces*/
+ }
+.menu li:hover ol {
+  display: block;
+  position:absolute;
+  left: 0; /*right: 0; si alineamos el menú a la derecha*/
+  top:100%;
+  border-top: solid 4px #F96;
+ }
+.menu ol {
+ display: block;
+ position:absolute;
+ left: 0;
+ top:100%;
+ border-top: solid 0.25rem #F96;
+ background: #fed;
+ }
+.menu ol:before {
+ content: "▲";
+ position: absolute;
+ top: -0.875rem;
+ left: 2.5rem; /*right: 2.5rem; si alineamos el menú a la derecha*/
+ color: #F96;
+ }
+.menu ol li {
+ display: block;
+ max-height: 3.125rem;
+ opacity: 1;
+ -webkit-transition: max-height 0.5s, opacity 0.5s; /* Safari */
+ transition: max-height 0.5s, opacity 0.5s;
+ white-space: nowrap;
+ }
+.menu .closed li {
+ overflow: hidden;
+ max-height: 0;
+ opacity: 0;
+ -webkit-transition: max-height 0.5s, opacity 0.5s; /* Safari */
+ transition: max-height 0.5s, opacity 0.5s;
+ }
+
+.menu {
+  margin: 0;
+  font-size: 0;
+  color: #999;
+  text-align: center; /*Nuestros li se desplazan a la derecha*/
+}
+
+.hamburguer {
+ display: none;
+ }
+
+@media  (max-width: 1280px),.../*ver Paso 2*/ {
+  html, body {
+    height: 100%; /*Igualamos la altura del body a la de la ventana*/
+   }
+   .menu {
+     width: 10rem;
+     height: 100%; /*Ahora igualamos la altura del menú a la del body*/
+     text-align: center;
+   }
+.menu * { /*Ajustamos el tamaño del texto y de todos los elementos para una mejor experiencia táctil*/
+ font-size: 1.5rem;
+ }
+}
+
+@media (max-width: 768px){
+  header { /*Devolvemos el estado horizontal inicial a la cabecera. El menú se adaptará a ella*/
+   width: initial;
+   height:initial;
+   }
+.hamburguer {
+   display: inline-block;
+   width: 3.125rem;
+   height: 3.125rem;
+   background: #fff url(img/hamburguer.png) no-repeat center center;
+   border: 0;
+   }
+.hidden {
+   display: none; /*esta clase nos permitirá ocultar el menú mediante jQuery*/
+  }
+}
+
+/*
+nav ol li{
+  float: left;
+  text-decoration: none;
+    width: auto;
+    padding-left: 65px;
+    position:relative;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+nav > ol >li:first-child{
+   
+
+    padding-left: 0px;
+
+}
+
+nav ol li a{
+    
+    color: #7400b8; 
+    text-decoration: none;
+    font-size: 1.3em; 
+    font-weight: 900;
+    
+}
+
+nav ol li ol{
+    list-style: none;
+    display: none;
+    position: absolute;
+    left:-40px;
+    top: 27px;
+    width: 100%;
+    text-align: left;
+   
+}
+
+nav ol li ol li {
+
+ display:block;
+ float:left;
+ width: 100%;
+ padding-left: 65px;
+
+}
+nav ol li:first-child ol li{ 
+
+
+  padding-left: 0px;
+
+}
+
+nav ol li:hover ol {
+ display:block;
+
+
+
+
+}
+*/
+
+
+
+/*nav{
+    width: 80%;
+    margin: 2% 10%;
+	  border: black solid 2px;  
+    
+}
+
+nav ol{
+    margin: 0% 15%;
+}
+nav ol li{
+    background-color:  #48bfe3;
+    float: left;
+    display: inline;
+    width: 20%;
+   
+    text-decoration: none;
+    margin: 0% 2%;
+     border: solid 2px #7400b8;
+     border-radius: 15px; 
+      text-align: center;
+    vertical-align: middle;
+}
+
+nav ol li a{
+    
+     color: #7400b8; 
+    padding: 0% 1%;
+    text-decoration: none;
+    font-size: 14px; 
+    font-weight: 900;
+}
+
+nav ol li ol li{
+    display: none;
+}
+
+
+*/
+/* Borde de los datos del formulario 
+
+section{
+    width: 10%;
+    padding-top: 20px; 
+    border: #7400b8 2px solid;
+    background-color: #48bfe3;
+    border-radius: 15px; 
+    clear: both;
+}*/
+/* Ancho de linea de los parrafos 
+
+section p{
+    margin: 0px;
+    line-height: 150%;
+     color: #7400b8; 
+      padding: 2% 5%;
+      font-weight: 900;
+        font-size: 14px; 
+      text-align: center;
+      vertical-align: middle;
+
+}*/
+
+/*
+nav ol li a:hover{
+
+     color:red; 
+}
+
+
+section p:hover{
+
+     color:red; 
+}
+
+
+@media (max-width: 3840px){
+    h1{ font-size: 4em;}
+}
+
+@media (max-width: 2560px){
+    h1{ font-size: 4em;}
+}
+
+@media (max-width: 1920px){
+    h1{ font-size: 3em;}
+}
+
+@media (max-width: 1280px){
+    h1{ font-size: 2em; }
+}
+
+@media (max-width: 1024px){
+    h1{ font-size: 2em; }
+}
+
+@media (max-width: 960px){
+    h1{ font-size: 1em; }
+}
+
+
+@media (max-width: 854px){
+    h1{ font-size: 1em; }
+}
+
+@media (max-width: 800px){
+    h1{ font-size: 1em;}
+}
+
+@media (max-width: 768px){
+    h1{ font-size: 1em;}
+}
+
+@media (max-width: 720px){
+    h1{ font-size: 1em;}
+}
+
+@media (max-width: 640px){
+
+nav{
+   width: 155px;
+   margin-top: 0px;
+   margin-right: 0pt;
+   margin-bottom: 10px;
+   margin-left: 0pt;
+}
+
+nav ol{
+   margin-top: 0px;
+   margin-right: 0px;
+   margin-bottom: 0px;
+   margin-left: 0px;
+   padding-top: 0pt;
+   padding-right: 0pt;
+   padding-bottom: 0pt;
+   padding-left: 0px;
+   list-style-type: none;
+   list-style-image: none;
+   list-style-position: outside;
+}
+
+}
+*/
+
+.limpiar{clear: both;}
+
+
+
+
+
+

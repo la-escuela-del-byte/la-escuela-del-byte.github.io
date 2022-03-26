@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>La escuela del Byte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="estilos1.css" rel="stylesheet" type="text/css" 
+               media="all"/>
+              <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" language="javascript">
+   $( document ).ready(function() {
+      var menuBurguer = function() {
+         //Ocultamos o mostramos menús en función del ancho de la página
+         var winWith = $(window).outerWidth();
+         if(winWith <= 768) {
+            $('.menu').addClass('hidden'); //Ocultamos cualquier menú que haya en nuestra página
+         }
+         else {
+            $('.menu').removeClass('hidden');
+            }
+         
+      }
+      menuBurguer(); //Inicializamos menuBurguer
+      
+      var clickBurguer = function() {
+         //Ocultamos o mostramos el menú asociado a la hamburguesa que ha sido pulsada
+         $('.hamburguer').on('click', function(){
+            var thisMenu = $(this).siblings('.menu');
+            $(thisMenu).toggleClass('hidden');
+         });
+      }
+      clickBurguer();//Inicializamos clickBurguer
+      
+      var closeMenu = function(){ //Ocultamos y mostramos submenús
+         $('.menu > li').has('ul').addClass('closed'); //Cerramos todos los submenús
+      }
+      closeMenu();
+      $('.menu > li a').on('click', function(){
+         var dady = $(this).parent();
+         if($(dady).is('.closed')){
+            closeMenu();
+            $(dady).removeClass('closed');
+         } else {
+            closeMenu();
+            }
+         });
+      $(window).resize(function(){
+         menuBurguer();//Llamamos a menuBurguer al cambiar el tamaño de la ventana
+         });
+   });
+</script>
+        <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script  src="./myscript.js"></script> -->
+    </head>
+ 
+
+    <body>
+    	<!-- boton ir arriba <span class="ir-arriba"><img src="img/arriba1.png" width="30" height="30"/></span> -->
+<!-- Boton hacia arriba
+<a class="ir-arriba"  javascript:void(0) title="Volver arriba">
+  <span class="fa-stack">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+  </span> -->
+</a>
+        
+         <!-- cabecera -->
+        <header>
+            <h1>LA ESCUELA DEL BYTE</h1>
+        </header>
+
+        <!-- enlaces contacto -->
+        <section>   
+            <p>
+                <a href="mailto:marinofernandezsantiago@gmail.com"><img src="img/correo1.png" width="30" height="30"/></a>
+                
+                <a href="https://github.com/la-escuela-del-byte"><img style="border-radius: 14px;" src="img/github1.png" width="30" height="30"/></a>
+          
+                <a href="www.linkedin.com/in/santiago-marino-fernández"><img style="background-color: white; border-radius: 5px;" src="img/linkedin1.png" width="30" height="30"/></a>
+            
+                <a href="https://raulperez.tieneblog.net/menu-horizontal-css-responsive-centrado-automaticamente/"><img style="border-radius: 5px;" src="img/instagram1.jpg" width="30" height="30"/></a>
+            </p> 
+        </section>
+
+         <!-- barra de navegación -->
+        <nav>
+        <button type="button" class="hamburguer"></button>
+          <ol class="menu">
+            <li>
+                <a href="index.html">SOBRE MÍ</a>
+                <ol>
+                    <li><a href="index.html">SOBRE MÍ</a></li>
+                    <li><a href="INFORMATICA_PAG.html">INFORMÁTICA</a></li>
+                    <li><a href="AUDIOVISUAL_PAG.html">AUDIOVISUAL</a></li>
+                    <li><a href="OTROS_PAG.html">OTROS</a></li>
+                </ol>
+            </li>
+            
+            <li>
+                <a href="INFORMATICA_PAG.html">INFORMÁTICA</a>
+                <ol>
+                    <li><a href="index.html">SOBRE MÍ</a></li>
+                    <li><a href="INFORMATICA_PAG.html">INFORMÁTICA</a></li>
+                    <li><a href="AUDIOVISUAL_PAG.html">AUDIOVISUAL</a></li>
+                    <li><a href="OTROS_PAG.html">OTROS</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="AUDIOVISUAL_PAG.html">AUDIOVISUAL</a>
+                <ol>
+                    <li><a href="index.html">SOBRE MÍ</a></li>
+                    <li><a href="INFORMATICA_PAG.html">INFORMÁTICA</a></li>
+                    <li><a href="AUDIOVISUAL_PAG.html">AUDIOVISUAL</a></li>
+                    <li><a href="OTROS_PAG.html">OTROS</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="OTROS_PAG.html">OTROS</a>
+                <ol>
+                    <li><a href="index.html">SOBRE MÍ</a></li>
+                    <li><a href="INFORMATICA_PAG.html">INFORMÁTICA</a></li>
+                    <li><a href="AUDIOVISUAL_PAG.html">AUDIOVISUAL</a></li>
+                    <li><a href="OTROS_PAG.html">OTROS</a></li>
+                </ol>
+            </li>
+        </ol>
+        
+        </nav>
+
+<div class="limpiar"></div>
+<!-- anuncio -->
+
+ 
+ <!-- cuerpo -->
+        <div id="arena">
+            <p> Bienvenid@ a mi página. Me presento, soy un fanático de la tecnología y
+                 he creado este lugar con el fin de compartir mi aprendizaje y
+                 facilitarselo a otr@s. 
+                 <br/>
+                  <br/>
+                Si quieres ponerte en contacto conmigo puedes usar los enlaces a mis redes y correo situados junto al título.
+                <br/>
+                 <br/>
+                Si eres una empresa o profesor y te interesa saber más sobre mi trabajo, puedes escribirme al correo.
+                 <br/>
+                  <br/>
+                 Recuerda que, como dijo Mario Quintana, ser autodidacta, es ser ignorante por
+                 cuenta propia. Sin más rodeos espero que encuentres lo que buscas.
+                 <br/>
+                  <br/>
+                 Salu2
+                 <br/>
+                   <br/>
+            </p>
+       
+        <p> Bienvenid@ a mi página. Me presento, soy un fanático de la tecnología y
+                 he creado este lugar con el fin de compartir mi aprendizaje y
+                 facilitarselo a otr@s. 
+                 <br/>
+                  <br/>
+                Si quieres ponerte en contacto conmigo puedes usar los enlaces a mis redes y correo situados junto al título.
+                <br/>
+                 <br/>
+                Si eres una empresa o profesor y te interesa saber más sobre mi trabajo, puedes escribirme al correo.
+                 <br/>
+                  <br/>
+                 Recuerda que, como dijo Mario Quintana, ser autodidacta, es ser ignorante por
+                 cuenta propia. Sin más rodeos espero que encuentres lo que buscas.
+                 <br/>
+                  <br/>
+                 Salu2
+                 <br/>
+                   <br/>
+            </p>
+
+             <p> Bienvenid@ a mi página. Me presento, soy un fanático de la tecnología y
+                 he creado este lugar con el fin de compartir mi aprendizaje y
+                 facilitarselo a otr@s. 
+                 <br/>
+                  <br/>
+                Si quieres ponerte en contacto conmigo puedes usar los enlaces a mis redes y correo situados junto al título.
+                <br/>
+                 <br/>
+                Si eres una empresa o profesor y te interesa saber más sobre mi trabajo, puedes escribirme al correo.
+                 <br/>
+                  <br/>
+                 Recuerda que, como dijo Mario Quintana, ser autodidacta, es ser ignorante por
+                 cuenta propia. Sin más rodeos espero que encuentres lo que buscas.
+                 <br/>
+                  <br/>
+                 Salu2
+                 <br/>
+                   <br/>
+            </p>
+           
+        </div>
+
+       <div id="particles-js"></div>
+
+      <script src="particles.js"></script>
+      <script src="app.js"></script>
+    </body>
+</html>

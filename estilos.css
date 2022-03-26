@@ -486,7 +486,7 @@ section p:hover{
 }
 */
 @media (max-width: 640px){
-        header {
+       header {
 	   width: initial;
 	   height:initial;
 	   }
@@ -494,7 +494,7 @@ section p:hover{
 	   display: inline-block;
 	   width: 3.125rem;
 	   height: 3.125rem;
-	   background: #fff url(img/hamburguer.png) no-repeat center center;
+	   background: red url(img/hamburguer.png) no-repeat center center;
 	   border: 0;
 	   outline: 0;
 		cursor: pointer;

@@ -555,9 +555,11 @@ border-radius: 15px;
 font-size: 25px;
 }
 
-ir-arriba{
+.ir-arriba:hover {
   background-color: black;
 }
 
 
-
+.ir-arriba img {
+    filter: invert(100%);
+}

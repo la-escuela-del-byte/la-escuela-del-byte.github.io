@@ -9,6 +9,25 @@
                media="all"/>
              
               <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" language="javascript">     
+        $(document).ready(function(){
+
+	$('.ir-arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
+
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+			$('.ir-arriba').slideDown(300);
+		} else {
+			$('.ir-arriba').slideUp(300);
+		}
+	});
+
+});
+        </script>
 <script type="text/javascript" language="javascript">
   $( document ).ready(function() {
       var menuBurguer = function() {
@@ -165,7 +184,7 @@
             <h2>Proficiencia</h2>
             <h2>Trabajo</h2>
         </div>
-        <button id="topbutton" title="Go to top"  style="visibility: visible;"> <img src="img/gotop.png" width="30" height="30"/></button>
+        <button class="ir-arriba" title="Go to top"  style="visibility: visible;"> <img src="img/gotop.png" width="30" height="30"/></button>
       
     </body>
 </html>

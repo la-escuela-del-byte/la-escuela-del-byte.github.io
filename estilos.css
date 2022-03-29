@@ -563,3 +563,18 @@ font-size: 25px;
 .ir-arriba img {
     filter: invert(100%);
 }
+
+
+#root {
+      margin 3px 3px;
+}
+
+.presentation{
+	
+	
+
+}
+
+.presentation img {
+    float: right;
+}

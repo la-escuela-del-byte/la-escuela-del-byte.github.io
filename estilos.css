@@ -583,5 +583,6 @@ font-size: 25px;
 h2 {
    font-family: Times New Roman,Times,serif;
       color: #7400b8; 
+      font-weight: 900;
       text-decoration:underline;
 }

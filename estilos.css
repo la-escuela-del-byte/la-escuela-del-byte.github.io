@@ -578,3 +578,9 @@ font-size: 25px;
 .presentation img {
     float: right;
 }
+
+h2 {
+   font-family: Times New Roman,Times,serif;
+      color: #7400b8; 
+      text-decoration:underline;
+}

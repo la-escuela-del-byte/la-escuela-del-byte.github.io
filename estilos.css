@@ -571,12 +571,13 @@ font-size: 25px;
 }
 
 .home{
+	margin-top: 10px;
 	
 	
 
 }
 .parrafo {width: 20%;}
-.presentation img {
+.home img {
     float: right;
 }
 
